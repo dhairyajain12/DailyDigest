@@ -26,7 +26,6 @@
             android:id="@+id/ic_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:padding="16dp"
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,282 +40,256 @@
             android:textColor="#787578"
             android:textSize="14dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/card_view_theme"
-            app:layout_constraintEnd_toEndOf="@id/card_view_theme"
-            app:layout_constraintStart_toStartOf="@id/card_view_theme"
+            app:layout_constraintBottom_toTopOf="@id/constraint_lyt_theme"
+            app:layout_constraintEnd_toEndOf="@id/constraint_lyt_theme"
+            app:layout_constraintStart_toStartOf="@id/constraint_lyt_theme"
             app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_theme"
-            android:layout_width="0dp"
+        <!--        theme dialog-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_theme"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
-            app:layout_constraintBottom_toTopOf="@id/card_view_notification"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar">
+            app:layout_constraintTop_toBottomOf="@id/txt_customize">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_set_theme"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_theme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_set_theme"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_theme"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_theme"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Theme"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_set_theme"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_theme"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Theme"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_set_theme"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_theme"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_theme"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_theme"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_theme"
-                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_notification"
-            android:layout_width="0dp"
+        <!--        notification dialog-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_notification"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_theme">
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_theme">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_notification"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_notification"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_notification"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_notification"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Notification"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_notification"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_notification"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Notification"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_notification"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_notification"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_notification"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_notification"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_notification"
-                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_reminder"
-            android:layout_width="0dp"
+        <!--        reminder dialog-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_reminder"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_notification">
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_notification">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_reminder"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_reminder"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_camera"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_reminder"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Reminder"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_reminder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_reminder"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Reminder"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_reminder"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_reminder"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_reminder"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_reminder"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_reminder"
-                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_date_format"
-            android:layout_width="0dp"
+        <!--        date format dialog-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_date_format"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_reminder">
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_reminder">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_date_format"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_date_format"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_calendar"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_date_format"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Date Format"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_date_format"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_date_format"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Date Format"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_date_format"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_date_format"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_date_format"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_date_format"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_date_format"
-                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_time_format"
-            android:layout_width="0dp"
+        <!--time format-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_time_format"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_date_format">
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_date_format">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_time_format"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_time_format"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_time"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_time_format"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Time Format"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_time_format"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_time_format"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Time Format"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_time_format"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_time_format"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_time_format"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_time_format"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_time_format"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:id="@+id/view"
@@ -324,9 +297,9 @@
             android:layout_height="1dp"
             android:layout_marginTop="24dp"
             android:background="#787578"
-            app:layout_constraintEnd_toEndOf="@id/card_view_time_format"
-            app:layout_constraintStart_toStartOf="@id/card_view_time_format"
-            app:layout_constraintTop_toBottomOf="@id/card_view_time_format" />
+            app:layout_constraintEnd_toEndOf="@id/constraint_lyt_time_format"
+            app:layout_constraintStart_toStartOf="@id/constraint_lyt_time_format"
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_time_format" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_about"
@@ -337,227 +310,157 @@
             android:textColor="#787578"
             android:textSize="14dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/card_view_rate_us"
-            app:layout_constraintEnd_toEndOf="@id/card_view_time_format"
-            app:layout_constraintStart_toStartOf="@id/card_view_time_format"
+            app:layout_constraintEnd_toEndOf="@id/constraint_lyt_time_format"
+            app:layout_constraintStart_toStartOf="@id/constraint_lyt_time_format"
             app:layout_constraintTop_toBottomOf="@id/view" />
 
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_rate_us"
-            android:layout_width="0dp"
+        <!--        rate us dialog -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_rate_us"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_about">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_rate_us"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_rate_us"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_rate_us"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_rate_us"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_rate_us"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Rate us"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_rate_us"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_rate_us"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Rate us"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_rate_us"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_rate_us"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_rate_us"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_rate_us"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_rate_us"
-                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_feedback"
-            android:layout_width="0dp"
+        <!--        feedback dialog-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lyt_feedback"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_rate_us">
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_rate_us">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_feedback"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_feedback"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_feedback"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_feedback"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_feedback"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Feedback"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_feedback"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_feedback"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Feedback"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_feedback"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_feedback"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_feedback"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_feedback"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_feedback"
-                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
-        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
-            android:id="@+id/card_view_privacy"
-            android:layout_width="0dp"
+        <!--        privacy policy dialog-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_privacy_policy"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="16dp"
-            android:backgroundTint="#4FB4ACB4"
-
+            android:background="@drawable/corner_radious_4fb4acb4_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_view_feedback">
+            app:layout_constraintTop_toBottomOf="@id/constraint_lyt_feedback">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_privacy"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_privacy_policy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_privacy"
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_privacy_policy"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_privacy"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minHeight="24dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/img_privacy"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_privacy"
-                    android:layout_width="280dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:minHeight="24dp"
-                    android:text="Privacy Policy"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@id/img_privacy"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_next_privacy"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txt_privacy"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ic_next_privacy"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_next"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/txt_privacy"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
-
-        <!--        <com.google.android.material.circularreveal.cardview.CircularRevealCardView-->
-        <!--            android:id="@+id/card_view_"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="48dp"-->
-        <!--            android:layout_margin="16dp"-->
-        <!--            android:backgroundTint="#4FB4ACB4"-->
-        <!--            -->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/card_view_privacy">-->
-
-        <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent">-->
-
-        <!--                <androidx.appcompat.widget.AppCompatImageView-->
-        <!--                    android:id="@+id/img_privacy"-->
-        <!--                    android:layout_width="50dp"-->
-        <!--                    android:layout_height="match_parent"-->
-        <!--                    android:src="@drawable/ic_privacy_policy"-->
-        <!--                    android:padding="12dp"-->
-        <!--                    app:layout_constraintStart_toStartOf="parent"-->
-        <!--                    app:layout_constraintTop_toTopOf="parent"-->
-        <!--                    app:layout_constraintBottom_toBottomOf="parent"/>-->
-
-        <!--                <androidx.appcompat.widget.AppCompatTextView-->
-        <!--                    android:id="@+id/txt_privacy"-->
-        <!--                    android:layout_width="280dp"-->
-        <!--                    android:layout_height="match_parent"-->
-        <!--                    android:gravity="center_vertical"-->
-        <!--                    android:minHeight="24dp"-->
-        <!--                    android:text="Privacy Policy"-->
-        <!--                    android:textColor="@color/black"-->
-        <!--                    android:textSize="16dp"-->
-        <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--                    app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                    app:layout_constraintHorizontal_bias="0.0"-->
-        <!--                    app:layout_constraintStart_toEndOf="@id/img_privacy"-->
-        <!--                    app:layout_constraintTop_toTopOf="parent"-->
-        <!--                    app:layout_constraintVertical_bias="0.0" />-->
-
-        <!--                <androidx.appcompat.widget.AppCompatImageView-->
-        <!--                    android:id="@+id/ic_next_privacy"-->
-        <!--                    android:layout_width="50dp"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:src="@drawable/ic_next"-->
-        <!--                    app:layout_constraintStart_toEndOf="@id/txt_privacy"-->
-        <!--                    app:layout_constraintEnd_toEndOf="parent"-->
-        <!--                    app:layout_constraintTop_toTopOf="parent"-->
-        <!--                    app:layout_constraintBottom_toBottomOf="parent"/>-->
-
-        <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-        <!--        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>-->
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

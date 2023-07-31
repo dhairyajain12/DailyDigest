@@ -32,29 +32,29 @@ class SettingsFragment : Fragment() {
             view.findNavController().navigate(action)
         }
 
-        binding.cardViewNotification.setOnClickListener {
+        binding.constraintLytNotification.setOnClickListener {
             val action = SettingsFragmentDirections.actionSettingsFragmentToNotificationFragment()
             view.findNavController().navigate(action)
         }
 
-        binding.cardViewReminder.setOnClickListener {
+        binding.constraintLytReminder.setOnClickListener {
             val action = SettingsFragmentDirections.actionSettingsFragmentToReminderFragment()
             view.findNavController().navigate(action)
         }
 
-        binding.cardViewDateFormat.setOnClickListener {
+        binding.constraintLytDateFormat.setOnClickListener {
             val listDate =
                 arrayOf("20 July 2023", "20 July 2023 9:28 am", "20 July 2023 9:28 am Sun")
             showFormat(R.drawable.ic_calendar, "Select Date Format", listDate)
         }
 
-        binding.cardViewTimeFormat.setOnClickListener {
+        binding.constraintLytTimeFormat.setOnClickListener {
             val listTime =
                 arrayOf("Default", "24 Hour", "12 Hour")
             showFormat(R.drawable.ic_time, "Select Time Format", listTime)
         }
 
-        binding.cardViewRateUs.setOnClickListener {
+        binding.constraintLytRateUs.setOnClickListener {
             val rateUsDialog = RateUsDialog(requireContext())
             rateUsDialog.window?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.transperent)))
             rateUsDialog.setCancelable(false)

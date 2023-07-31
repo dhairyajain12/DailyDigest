@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_archived"
+        android:icon="@drawable/ic_italic"
+        android:title="Archive"
+        />
+    <item
+        android:id="@+id/menu_theme"
+        android:icon="@drawable/ic_bold"
+        android:title="Theme"
+        />
+    <item
+        android:id="@+id/menu_color"
+        android:icon="@drawable/ic_search"
+        android:title="Color"
+        />
+    <item
+        android:id="@+id/menu_copy"
+        android:icon="@drawable/ic_underlined"
+        android:title="Make a Copy"
+        />
+    <item
+        android:id="@+id/menu_reminder"
+        android:icon="@drawable/ic_italic"
+        android:title="Reminder"
+        />
+    <item
+        android:id="@+id/menu_send"
+        android:icon="@drawable/ic_bold"
+        android:title="Send"
+        />
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/ic_plus"
+        android:title="Help"
+        />
+</menu>

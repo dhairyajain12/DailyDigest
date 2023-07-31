@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
 
+    // var declaration
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

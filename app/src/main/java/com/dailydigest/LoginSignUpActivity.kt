@@ -7,7 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.dailydigest.databinding.ActivityLoginSignUpBinding
+import com.dailydigest.databinding.FragmentLoginSignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -16,7 +16,7 @@ class LoginSignUpActivity : AppCompatActivity() {
 
     private val TAG = "LoginSignUpActivity"
 
-    private lateinit var loginSignUpBinding: ActivityLoginSignUpBinding
+    private lateinit var loginSignUpBinding: FragmentLoginSignUpBinding
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,7 @@ class LoginSignUpActivity : AppCompatActivity() {
         Thread.sleep(2000)
         installSplashScreen()
         auth = Firebase.auth
-        loginSignUpBinding = ActivityLoginSignUpBinding.inflate(layoutInflater)
+        loginSignUpBinding = FragmentLoginSignUpBinding.inflate(layoutInflater)
         setContentView(loginSignUpBinding.root)
 
     }

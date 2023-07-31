@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975213990758",
+    "project_id": "daily-digest-dj-tp",
+    "storage_bucket": "daily-digest-dj-tp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975213990758:android:19935333b2b872341a6ea7",
+        "android_client_info": {
+          "package_name": "com.dailydigest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975213990758-ov3bkd093s18aismcs9214r94qnmee54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQoEzMc8s3LBtr_a5PHTghIt_M8Gq47EQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975213990758-ov3bkd093s18aismcs9214r94qnmee54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

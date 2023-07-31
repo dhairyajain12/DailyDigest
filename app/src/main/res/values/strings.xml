@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Daily Digest</string>
+    <string name="app_login">Login</string>
+    <string name="app_sign_up">Sign Up</string>
+    <string name="app_email">Email</string>
+    <string name="app_forget_password"><u>Forget Password?</u></string>
+    <string name="app_password">Password</string>
+    <string name="app_confirm_password">Confirm Password</string>
+    <string name="app_email_error">Please enter a valid email!</string>
+    <string name="app_password_error">Please enter a valid password!</string>
+    <string name="app_confirm_password_error">Please re-enter a valid password to confirm!</string>
+    <string name="app_password_match_error">Passwords don\'t match!</string>
+    <string name="app_forgot_password_title">Forgot Password</string>
+    <string name="app_reset_password">Reset Password</string>
+    <string name="app_reset_email_hint">Enter email to reset password</string>
+    <string name="app_reset_email_title">Please enter email to reset password</string>
+    <string name="app_back_to_login"><u><![CDATA[<< Back to Login]]></u></string>
 </resources>

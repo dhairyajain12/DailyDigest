@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginSignUpFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -112,5 +112,26 @@
         <action
             android:id="@+id/action_calendarFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginSignUpFragment"
+        android:name="com.dailydigest.LoginSignUpFragment"
+        android:label="fragment_login_sign_up"
+        tools:layout="@layout/fragment_login_sign_up" >
+        <action
+            android:id="@+id/action_loginSignUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginSignUpFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.dailydigest.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_loginSignUpFragment"
+            app:destination="@id/loginSignUpFragment" />
     </fragment>
 </navigation>

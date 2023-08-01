@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.dailydigest.databinding.FragmentForgetPasswordBinding
 
 class ForgetPasswordFragment : Fragment() {
-
+    
+    // var declaration
     private var forgetPasswordFragmentBinding: FragmentForgetPasswordBinding? = null
     private val binding get() = forgetPasswordFragmentBinding!!
 
@@ -19,16 +21,21 @@ class ForgetPasswordFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate the layout for this fragment
         forgetPasswordFragmentBinding = FragmentForgetPasswordBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    // Forget Password Fragment View Created
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        // Forget Password Form Components
         val fpEmail = forgetPasswordFragmentBinding!!.emailForgotPassword
         val fpSendBtn = forgetPasswordFragmentBinding!!.btnResetPassword
         val fpBack = forgetPasswordFragmentBinding!!.txtFpBackToLogin
 
+        // Forget Password Send Email Button Click Listener
         fpSendBtn.setOnClickListener {
             if (fpEmail.text?.isEmpty() == true) {
                 fpEmail.error = getString(R.string.app_email_error)
@@ -47,11 +54,14 @@ class ForgetPasswordFragment : Fragment() {
             }
         }
 
+        // Forget Password Back to Login Click Listener
         fpBack.setOnClickListener {
-//            onBackPressedDispatcher.onBackPressed()
+            val action = ForgetPasswordFragmentDirections.actionForgetPasswordFragmentToLoginSignUpFragment()
+            view.findNavController().navigate(action)
         }
     }
 
+    // Send Email Private Function
     private fun sendEmail() {
         // Send Email to Reset Password
         Toast.makeText(requireContext(), "Email Sent Successfully", Toast.LENGTH_SHORT).show()

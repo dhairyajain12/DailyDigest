@@ -46,8 +46,8 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
             context as Activity?,
             drawerLayout,
             toolbar,
-            R.string.open,
-            R.string.close
+            R.string.app_open,
+            R.string.app_close
         )
 
         drawerLayout.addDrawerListener(toggle)

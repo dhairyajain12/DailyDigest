@@ -25,7 +25,7 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -63,7 +63,7 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
             view.findNavController().navigate(action)
         }
 
-//        binding.icNotificaiton.setOnClickListener {
+//        binding.icNotification.setOnClickListener {
 //            val action = HomeFragmentDirections.actionHomeFragmentToNotificationFragment()
 //            view.findNavController().navigate(action)
 //        }

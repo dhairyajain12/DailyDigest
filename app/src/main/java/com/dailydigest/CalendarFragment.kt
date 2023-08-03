@@ -16,7 +16,7 @@ class CalendarFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // binding initialization
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
         return binding.root

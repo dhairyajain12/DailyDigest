@@ -41,7 +41,7 @@
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
                     android:padding="25dp"
-                    android:src="@drawable/three_star_imoji" />
+                    android:src="@drawable/three_star_emoji" />
 
             </RelativeLayout>
 
@@ -112,8 +112,6 @@
                     android:layout_marginStart="8dp"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
-
 </FrameLayout>

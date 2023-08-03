@@ -28,9 +28,10 @@
                 android:id="@+id/edt_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"
+                android:background="@drawable/dr_remove_border"
+                android:hint="@string/app_empty_string"
                 android:minHeight="40dp"
-                android:background="@drawable/dr_remove_border"/>
+                android:singleLine="true" />
 
             <View
                 android:layout_width="match_parent"

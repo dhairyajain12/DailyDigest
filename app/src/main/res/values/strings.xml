@@ -18,4 +18,5 @@
     <string name="app_open">Open</string>
     <string name="app_close">Close</string>
     <string name="app_no_internet">No Internet Connection!</string>
+    <string name="app_empty_string" />
 </resources>

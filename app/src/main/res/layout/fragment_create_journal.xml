@@ -55,7 +55,8 @@
         android:gravity="top"
         android:hint="Description"
         android:minHeight="36dp"
-        android:paddingRight="8dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
         android:scrollbarSize="6dp"
         android:scrollbars="vertical"
         android:textColor="@color/black"
@@ -85,8 +86,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_lyt"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btn_bold"

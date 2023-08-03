@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.dailydigest.databinding.FragmentSettingsBinding
@@ -18,7 +19,7 @@ class SettingsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
@@ -56,7 +57,7 @@ class SettingsFragment : Fragment() {
 
         binding.constraintLytRateUs.setOnClickListener {
             val rateUsDialog = RateUsDialog(requireContext())
-            rateUsDialog.window?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.transperent)))
+            rateUsDialog.window?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(requireContext(), R.color.transperent)))
             rateUsDialog.setCancelable(false)
             rateUsDialog.show()
         }
@@ -70,14 +71,12 @@ class SettingsFragment : Fragment() {
         alertDialog.setIcon(icon)
         alertDialog.setTitle(title)
 
-        val itemList = listArray
-
-        alertDialog.setSingleChoiceItems(itemList, checkedItem[0]) { dialog, which ->
+        alertDialog.setSingleChoiceItems(listArray, checkedItem[0]) { _, which ->
             checkedItem[0] = which
         }
 
-        alertDialog.setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
-        alertDialog.setPositiveButton("Ok") { dialog, which -> dialog.dismiss() }
+        alertDialog.setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
+        alertDialog.setPositiveButton("Ok") { dialog, _ -> dialog.dismiss() }
 
         val customAlertDialog = alertDialog.create()
         customAlertDialog.show()

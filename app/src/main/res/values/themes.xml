@@ -1,8 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.DailyDigest" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Base.Theme.DailyDigest" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:statusBarColor">#98a7c2</item>
     </style>
     
@@ -21,7 +20,7 @@
 
     <style name="Theme.App.DailyDigest" parent="Base.Theme.DailyDigest" />
     <style name="Theme.DailyDigest" parent="Base.Theme.DailyDigest.BackgroundImage" />
-
+    
 <!--    Rating bar star theme-->
     <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
 

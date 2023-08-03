@@ -24,7 +24,7 @@ class RateUsDialog(context: Context) : Dialog(context) {
             } else if (rating <= 2) {
                 binding.imgRating.setImageResource(R.drawable.two_star_imoji)
             } else if (rating <= 3) {
-                binding.imgRating.setImageResource(R.drawable.three_star_imoji)
+                binding.imgRating.setImageResource(R.drawable.three_star_emoji)
             } else if (rating <= 4) {
                 binding.imgRating.setImageResource(R.drawable.four_star_imoji)
             } else if (rating <= 5) {

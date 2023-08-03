@@ -94,7 +94,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <!-- Login Form -->
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:gravity="center"
                     android:id="@+id/ll_login"
                     android:layout_width="match_parent"
@@ -104,17 +104,18 @@
 
                     <!-- Email Input -->
                     <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:id="@+id/edt_email_login_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:minHeight="48dp"
-                        app:boxStrokeColor="@color/custom_app_theme"
                         app:boxStrokeWidth="2dp"
-                        app:hintTextColor="@color/custom_app_theme">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" >
                         
                         <com.google.android.material.textfield.TextInputEditText
-                            android:background="@drawable/custom_edt_txt"
-                            android:drawableStart="@drawable/ic_email"
                             android:ems="10"
                             android:hint="@string/app_email"
                             android:id="@+id/edt_email_login"
@@ -131,17 +132,19 @@
 
                     <!-- Password Input -->
                     <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:id="@+id/edt_password_login_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:minHeight="48dp"
-                        app:boxStrokeColor="@color/custom_app_theme"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edt_email_login_layout"
                         app:boxStrokeWidth="2dp"
-                        app:hintTextColor="@color/custom_app_theme">
+                        app:endIconMode="password_toggle" >
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:background="@drawable/custom_edt_txt"
-                            android:drawableStart="@drawable/ic_password_login"
                             android:ems="10"
                             android:hint="@string/app_password"
                             android:id="@+id/edt_password_login"
@@ -159,18 +162,21 @@
                     <!-- Forget Password TextView -->
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tv_forget_password"
-                        android:layout_gravity="end"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="5dp"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:text="@string/app_forget_password"
                         android:textAlignment="textEnd"
                         android:textColor="#616161"
                         android:textSize="14sp"
-                        android:textStyle="normal" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                        android:textStyle="normal" 
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edt_password_login_layout" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!-- SignUp Form -->
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:gravity="center"
                     android:id="@+id/ll_signup"
                     android:layout_width="match_parent"
@@ -181,17 +187,19 @@
 
                     <!-- Email Input -->
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_email_signup_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:minHeight="48dp"
-                        app:boxStrokeColor="@color/custom_app_theme"
-                        app:boxStrokeWidth="2dp"
-                        app:hintTextColor="@color/custom_app_theme">
+                        app:boxStrokeWidth="2dp" 
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:endIconMode="clear_text" >
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:background="@drawable/custom_edt_txt"
-                            android:drawableStart="@drawable/ic_email"
                             android:ems="10"
                             android:hint="@string/app_email"
                             android:id="@+id/edt_email_signup"
@@ -208,17 +216,19 @@
 
                     <!-- Password Input -->
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_password_signup_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:minHeight="48dp"
-                        app:boxStrokeColor="@color/custom_app_theme"
                         app:boxStrokeWidth="2dp"
-                        app:hintTextColor="@color/custom_app_theme">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edt_email_signup_layout"
+                        app:endIconMode="password_toggle" >
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:background="@drawable/custom_edt_txt"
-                            android:drawableStart="@drawable/ic_password_signup"
                             android:ems="10"
                             android:hint="@string/app_password"
                             android:id="@+id/edt_password_signup"
@@ -235,17 +245,18 @@
 
                     <!-- Confirm Password Input -->
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/edt_confirm_password_signup_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:minHeight="48dp"
-                        app:boxStrokeColor="@color/custom_app_theme"
                         app:boxStrokeWidth="2dp"
-                        app:hintTextColor="@color/custom_app_theme">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edt_password_signup_layout"
+                        app:endIconMode="password_toggle">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:background="@drawable/custom_edt_txt"
-                            android:drawableStart="@drawable/ic_password_signup"
                             android:ems="10"
                             android:hint="@string/app_confirm_password"
                             android:id="@+id/edt_confirm_password_signup"
@@ -259,7 +270,7 @@
                             android:textSize="16sp"
                             android:textStyle="normal" />
                     </com.google.android.material.textfield.TextInputLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!-- Login or SignUp Button -->
                 <androidx.appcompat.widget.AppCompatButton

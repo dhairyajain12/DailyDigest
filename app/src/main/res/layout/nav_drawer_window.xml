@@ -10,7 +10,7 @@
         android:layout_height="200dp"
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="@drawable/img_background_navigationview">
+        android:background="@drawable/img_background_navigation_view">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
             android:id="@+id/txt_user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Daily Digest App"
+            android:text="@string/app_name"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:textStyle="bold"

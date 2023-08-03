@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.dailydigest.databinding.FragmentCreateJournalBinding
@@ -24,7 +23,7 @@ class CreateJournalFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // binding initialization
         _binding = FragmentCreateJournalBinding.inflate(inflater, container, false)
         return createJournalBinding.root
@@ -38,59 +37,59 @@ class CreateJournalFragment : Fragment() {
 
         //Bold Text
         createJournalBinding.btnBold.setOnClickListener {
-            var spanableString = SpannableStringBuilder(editText.text)
-            spanableString.setSpan(
+            val spannableString = SpannableStringBuilder(editText.text)
+            spannableString.setSpan(
                 StyleSpan(Typeface.BOLD),
                 editText.selectionStart,
                 editText.selectionEnd,
                 0)
 
-            editText.setText(spanableString)
+            editText.text = spannableString
         }
 
         //Italic Text
         createJournalBinding.btnItalic.setOnClickListener {
-            var spannableString = SpannableStringBuilder(editText.text)
+            val spannableString = SpannableStringBuilder(editText.text)
             spannableString.setSpan(
                 StyleSpan(Typeface.ITALIC),
                 editText.selectionStart,
                 editText.selectionEnd,
                 0)
 
-            editText.setText(spannableString)
+            editText.text = spannableString
         }
 
         //Underline Text
         createJournalBinding.btnUnderline.setOnClickListener {
-            var spannableString = SpannableStringBuilder(editText.text)
+            val spannableString = SpannableStringBuilder(editText.text)
             spannableString.setSpan(
                 UnderlineSpan(),
                 editText.selectionStart,
                 editText.selectionEnd,
                 0)
 
-            editText.setText(spannableString)
+            editText.text = spannableString
         }
 
         //text alignment start
         createJournalBinding.btnFormatLeft.setOnClickListener {
             editText.textAlignment = View.TEXT_ALIGNMENT_VIEW_START
-            var spannableString = SpannableStringBuilder(editText.text)
-            editText.setText(spannableString)
+            val spannableString = SpannableStringBuilder(editText.text)
+            editText.text = spannableString
         }
 
         //text alignment center
         createJournalBinding.btnFormatCenter.setOnClickListener {
             editText.textAlignment = View.TEXT_ALIGNMENT_CENTER
-            var spannableString = SpannableStringBuilder(editText.text)
-            editText.setText(spannableString)
+            val spannableString = SpannableStringBuilder(editText.text)
+            editText.text = spannableString
         }
 
         //text alignment right
         createJournalBinding.btnFormatRight.setOnClickListener {
             editText.textAlignment = View.TEXT_ALIGNMENT_VIEW_END
-            var spannableString = SpannableStringBuilder(editText.text)
-            editText.setText(spannableString)
+            val spannableString = SpannableStringBuilder(editText.text)
+            editText.text = spannableString
         }
 
         // set pop-up menu

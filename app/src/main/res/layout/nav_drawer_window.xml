@@ -20,7 +20,7 @@
             app:shapeAppearanceOverlay="@style/Circular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/corner_radius"
+            android:background="@drawable/corner_radius_e1e1e1_300dp"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"/>

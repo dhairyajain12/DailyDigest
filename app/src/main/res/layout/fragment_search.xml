@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SearchFragment">
+    tools:context=".Fragments.SearchFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -22,7 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:endIconMode="clear_text"
-            android:layout_marginEnd="32dp">
+            android:layout_marginEnd="32dp"
+            android:minHeight="30dp"
+            android:layout_marginTop="-4dp">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/edt_search"
@@ -41,5 +43,4 @@
 
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </FrameLayout>

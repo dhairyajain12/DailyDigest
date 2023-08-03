@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginSignUpFragment">
+    tools:context=".Fragments.LoginSignUpFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_marginTop="48dp"
             android:text="@string/app_name"
             android:textAlignment="center"
-            android:textColor="@color/custom_app_theme"
+            android:textColor="@color/custom_corner_radius_app_theme_50dp"
             android:textSize="32sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
@@ -88,7 +88,7 @@
                         android:paddingTop="5dp"
                         android:text="@string/app_sign_up"
                         android:textAlignment="center"
-                        android:textColor="@color/custom_app_theme"
+                        android:textColor="@color/custom_corner_radius_app_theme_50dp"
                         android:textSize="24sp"
                         android:textStyle="bold|normal" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -281,7 +281,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="24dp"
-                    android:background="@drawable/custom_btn_50"
+                    android:background="@drawable/corner_radius_btn_50dp"
                     android:elevation="15dp"
                     android:gravity="center"
                     android:minHeight="48dp"
@@ -290,7 +290,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/textColor"
                     android:textSize="17sp"
-                    app:backgroundTint="@color/custom_app_theme" />
+                    app:backgroundTint="@color/custom_corner_radius_app_theme_50dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

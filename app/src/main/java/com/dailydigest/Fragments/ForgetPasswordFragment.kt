@@ -1,4 +1,4 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.os.Bundle
 import android.util.Patterns
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.navigation.findNavController
+import com.dailydigest.R
 import com.dailydigest.databinding.FragmentForgetPasswordBinding
 
 class ForgetPasswordFragment : Fragment() {

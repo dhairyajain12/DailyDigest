@@ -1,4 +1,4 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,30 +6,29 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.dailydigest.databinding.FragmentCalendarBinding
+import com.dailydigest.databinding.FragmentNotificationListBinding
 
 
-class CalendarFragment : Fragment() {
-    //var declaration
-    private var _binding: FragmentCalendarBinding? = null
+class NotificationListFragment : Fragment() {
+//    var declaration
+    private var _binding : FragmentNotificationListBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // binding initialization
-        _binding = FragmentCalendarBinding.inflate(inflater, container, false)
+        _binding = FragmentNotificationListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // back button click event
+//        back button click event
         binding.icBack.setOnClickListener {
-            val action = CalendarFragmentDirections.actionCalendarFragmentToHomeFragment()
+            val action = NotificationListFragmentDirections.actionNotificationListFragmentToHomeFragment()
             view.findNavController().navigate(action)
         }
-
     }
 }

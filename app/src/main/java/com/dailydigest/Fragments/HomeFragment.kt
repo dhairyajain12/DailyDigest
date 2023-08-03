@@ -1,18 +1,17 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ToggleButton
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.dailydigest.R
 import com.dailydigest.databinding.FragmentHomeBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -63,10 +62,10 @@ class HomeFragment : Fragment(), NavigationView.OnNavigationItemSelectedListener
             view.findNavController().navigate(action)
         }
 
-//        binding.icNotification.setOnClickListener {
-//            val action = HomeFragmentDirections.actionHomeFragmentToNotificationFragment()
-//            view.findNavController().navigate(action)
-//        }
+        binding.icNotification.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToNotificationListFragment()
+            view.findNavController().navigate(action)
+        }
 
         binding.navView.setNavigationItemSelectedListener {
             when (it.itemId) {

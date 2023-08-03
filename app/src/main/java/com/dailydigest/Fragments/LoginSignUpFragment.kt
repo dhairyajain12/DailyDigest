@@ -1,4 +1,4 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
+import com.dailydigest.R
 import com.dailydigest.databinding.FragmentLoginSignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -77,12 +78,20 @@ class LoginSignUpFragment : Fragment() {
                     R.color.custom_app_theme, 
                     null) // Set Text Color of Login View
             )
+            signUpView.background = ResourcesCompat.getDrawable(resources,
+                R.drawable.custom_switch_tracks, null)
+            signUpView.setTextColor(ResourcesCompat.getColor(resources, R.color.textColor, null))
+            loginSignUpBtn.setText(R.string.app_sign_up)
+            loginView.background = null
+            loginView.setTextColor(ResourcesCompat.getColor(resources,
+                R.color.custom_corner_radius_app_theme_50dp, null))
             loginLayout.visibility = View.GONE
             signUpLayout.visibility = View.VISIBLE
         }
         
         // Login Tab Click Listener
         loginView.setOnClickListener {
+<<<<<<< HEAD:app/src/main/java/com/dailydigest/LoginSignUpFragment.kt
             loginView.background = 
                 ResourcesCompat.getDrawable(
                     resources, 
@@ -102,6 +111,15 @@ class LoginSignUpFragment : Fragment() {
                     R.color.custom_app_theme, 
                     null) // Set Text Color of SignUp View
             )
+=======
+            loginView.background = ResourcesCompat.getDrawable(resources,
+                R.drawable.custom_switch_tracks, null)
+            loginView.setTextColor(ResourcesCompat.getColor(resources, R.color.textColor, null))
+            loginSignUpBtn.setText(R.string.app_login)
+            signUpView.background = null
+            signUpView.setTextColor(ResourcesCompat.getColor(resources,
+                R.color.custom_corner_radius_app_theme_50dp, null))
+>>>>>>> ea684be005c147fdcce97c7f7f93ca9cfdd13e4f:app/src/main/java/com/dailydigest/Fragments/LoginSignUpFragment.kt
             signUpLayout.visibility = View.GONE
             loginLayout.visibility = View.VISIBLE
         }

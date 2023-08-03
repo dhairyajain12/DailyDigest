@@ -1,4 +1,4 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,30 +6,32 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.dailydigest.databinding.FragmentNotificationBinding
+import com.dailydigest.databinding.FragmentProfileBinding
 
-
-class NotificationFragment : Fragment() {
-    private var _binding: FragmentNotificationBinding? = null
+class ProfileFragment : Fragment() {
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentNotificationBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.icBack.setOnClickListener {
-            val action = NotificationFragmentDirections.actionNotificationFragmentToSettingsFragment()
-//            val action2 = NotificationFragmentDirections.actionNotificationFragmentToHomeFragment()
+        binding.icBack.setOnClickListener{
+            val action = ProfileFragmentDirections.actionProfileFragmentToHomeFragment()
             view.findNavController().navigate(action)
         }
 
+        binding.icEdit.setOnClickListener {
+            val action = ProfileFragmentDirections.actionProfileFragmentToEditProfileFragment()
+            view.findNavController().navigate(action)
+        }
     }
+
 }

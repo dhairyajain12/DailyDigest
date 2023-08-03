@@ -20,15 +20,15 @@ class RateUsDialog(context: Context) : Dialog(context) {
         // rating bar star change logic
         binding.ratingBar.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
             if (rating <= 1) {
-                binding.imgRating.setImageResource(R.drawable.one_star_emoji)
+                binding.imgRating.setImageResource(R.drawable.imoji_one_star)
             } else if (rating <= 2) {
-                binding.imgRating.setImageResource(R.drawable.two_star_imoji)
+                binding.imgRating.setImageResource(R.drawable.imoji_two_star)
             } else if (rating <= 3) {
-                binding.imgRating.setImageResource(R.drawable.three_star_imoji)
+                binding.imgRating.setImageResource(R.drawable.imoji_three_star)
             } else if (rating <= 4) {
-                binding.imgRating.setImageResource(R.drawable.four_star_imoji)
+                binding.imgRating.setImageResource(R.drawable.imoji_four_star)
             } else if (rating <= 5) {
-                binding.imgRating.setImageResource(R.drawable.five_star_imoji)
+                binding.imgRating.setImageResource(R.drawable.imoji_five_star)
             }
 
             // animation of image

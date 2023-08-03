@@ -1,15 +1,20 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.dailydigest.R
 import com.dailydigest.databinding.FragmentSettingsBinding
 import com.dailydigest.dialog.RateUsDialog
+import java.util.Calendar
+import java.util.Locale
 
 class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
@@ -45,7 +50,7 @@ class SettingsFragment : Fragment() {
         binding.constraintLytDateFormat.setOnClickListener {
             val listDate =
                 arrayOf("20 July 2023", "20 July 2023 9:28 am", "20 July 2023 9:28 am Sun")
-            showFormat(R.drawable.ic_calendar, "Select Date Format", listDate)
+            showFormat(R.drawable.img_ic_calendar, "Select Date Format", listDate)
         }
 
         binding.constraintLytTimeFormat.setOnClickListener {
@@ -59,6 +64,23 @@ class SettingsFragment : Fragment() {
             rateUsDialog.window?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.transperent)))
             rateUsDialog.setCancelable(false)
             rateUsDialog.show()
+        }
+
+        //        feed back click event
+        binding.constraintLytFeedback.setOnClickListener {
+            val dateFormat = SimpleDateFormat("dd MMMM yy", Locale.US)
+            val currentDate = dateFormat.format(Calendar.getInstance().time)
+
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("meaasge/rfc822")
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("pateltushar9601780945@gmail.com"))
+            intent.putExtra(
+                Intent.EXTRA_SUBJECT,
+                "Feedback : Daily Digest application [$currentDate]"
+            )
+            intent.putExtra(Intent.EXTRA_TEXT, "")
+            startActivity(Intent.createChooser(intent, "Choose an email client : "))
+
         }
     }
 

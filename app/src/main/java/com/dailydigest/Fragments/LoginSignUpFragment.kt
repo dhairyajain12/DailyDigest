@@ -1,6 +1,5 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
-import android.content.res.Resources
 import android.os.Bundle
 import android.util.Patterns
 import androidx.fragment.app.Fragment
@@ -9,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
+import com.dailydigest.R
 import com.dailydigest.databinding.FragmentLoginSignUpBinding
 
 class LoginSignUpFragment : Fragment() {
@@ -55,22 +55,26 @@ class LoginSignUpFragment : Fragment() {
         
         // Sign Up Tab Click Listener
         signUpView.setOnClickListener {
-            signUpView.background = ResourcesCompat.getDrawable(resources, R.drawable.custom_switch_tracks, null)
+            signUpView.background = ResourcesCompat.getDrawable(resources,
+                R.drawable.custom_switch_tracks, null)
             signUpView.setTextColor(ResourcesCompat.getColor(resources, R.color.textColor, null))
             loginSignUpBtn.setText(R.string.app_sign_up)
             loginView.background = null
-            loginView.setTextColor(ResourcesCompat.getColor(resources, R.color.custom_app_theme, null))
+            loginView.setTextColor(ResourcesCompat.getColor(resources,
+                R.color.custom_corner_radius_app_theme_50dp, null))
             loginLayout.visibility = View.GONE
             signUpLayout.visibility = View.VISIBLE
         }
         
         // Login Tab Click Listener
         loginView.setOnClickListener {
-            loginView.background = ResourcesCompat.getDrawable(resources, R.drawable.custom_switch_tracks, null)
+            loginView.background = ResourcesCompat.getDrawable(resources,
+                R.drawable.custom_switch_tracks, null)
             loginView.setTextColor(ResourcesCompat.getColor(resources, R.color.textColor, null))
             loginSignUpBtn.setText(R.string.app_login)
             signUpView.background = null
-            signUpView.setTextColor(ResourcesCompat.getColor(resources, R.color.custom_app_theme, null))
+            signUpView.setTextColor(ResourcesCompat.getColor(resources,
+                R.color.custom_corner_radius_app_theme_50dp, null))
             signUpLayout.visibility = View.GONE
             loginLayout.visibility = View.VISIBLE
         }

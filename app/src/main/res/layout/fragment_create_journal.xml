@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".CreateJournalFragment"
+    tools:context=".Fragments.CreateJournalFragment"
     android:background="#edeff2">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -34,7 +34,7 @@
         android:id="@+id/edt_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/dr_textfield"
+        android:background="@drawable/dr_textfield_0000_left_pad_16dp"
         android:hint="Title"
         android:minHeight="64dp"
         android:scrollbars="horizontal"
@@ -51,7 +51,7 @@
         android:id="@+id/edt_desc"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/dr_textfield"
+        android:background="@drawable/dr_textfield_0000_left_pad_16dp"
         android:gravity="top"
         android:hint="Description"
         android:minHeight="36dp"

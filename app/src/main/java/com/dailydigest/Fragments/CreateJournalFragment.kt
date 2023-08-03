@@ -1,4 +1,4 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -9,9 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.dailydigest.R
 import com.dailydigest.databinding.FragmentCreateJournalBinding
 
 

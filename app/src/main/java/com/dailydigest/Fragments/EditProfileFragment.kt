@@ -1,4 +1,4 @@
-package com.dailydigest
+package com.dailydigest.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

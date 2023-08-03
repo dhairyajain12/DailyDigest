@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.dailydigest.HomeFragment"
+        android:name="com.dailydigest.Fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -28,10 +28,13 @@
         <action
             android:id="@+id/action_homeFragment_to_calendarFragment"
             app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationListFragment"
+            app:destination="@id/notificationListFragment" />
     </fragment>
     <fragment
         android:id="@+id/createJournalFragment"
-        android:name="com.dailydigest.CreateJournalFragment"
+        android:name="com.dailydigest.Fragments.CreateJournalFragment"
         android:label="fragment_create_journal"
         tools:layout="@layout/fragment_create_journal" >
         <action
@@ -40,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.dailydigest.SearchFragment"
+        android:name="com.dailydigest.Fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
@@ -49,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.dailydigest.ProfileFragment"
+        android:name="com.dailydigest.Fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -61,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.dailydigest.EditProfileFragment"
+        android:name="com.dailydigest.Fragments.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" >
         <action
@@ -70,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.dailydigest.SettingsFragment"
+        android:name="com.dailydigest.Fragments.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -85,7 +88,7 @@
     </fragment>
     <fragment
         android:id="@+id/notificationFragment"
-        android:name="com.dailydigest.NotificationFragment"
+        android:name="com.dailydigest.Fragments.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" >
         <action
@@ -97,7 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/reminderFragment"
-        android:name="com.dailydigest.ReminderFragment"
+        android:name="com.dailydigest.Fragments.ReminderFragment"
         android:label="fragment_reminder"
         tools:layout="@layout/fragment_reminder" >
         <action
@@ -106,7 +109,7 @@
     </fragment>
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.dailydigest.CalendarFragment"
+        android:name="com.dailydigest.Fragments.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" >
         <action
@@ -115,7 +118,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginSignUpFragment"
-        android:name="com.dailydigest.LoginSignUpFragment"
+        android:name="com.dailydigest.Fragments.LoginSignUpFragment"
         android:label="fragment_login_sign_up"
         tools:layout="@layout/fragment_login_sign_up" >
         <action
@@ -127,11 +130,20 @@
     </fragment>
     <fragment
         android:id="@+id/forgetPasswordFragment"
-        android:name="com.dailydigest.ForgetPasswordFragment"
+        android:name="com.dailydigest.Fragments.ForgetPasswordFragment"
         android:label="fragment_forget_password"
         tools:layout="@layout/fragment_forget_password" >
         <action
             android:id="@+id/action_forgetPasswordFragment_to_loginSignUpFragment"
             app:destination="@id/loginSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationListFragment"
+        android:name="com.dailydigest.Fragments.NotificationListFragment"
+        android:label="fragment_notification_list"
+        tools:layout="@layout/fragment_notification_list" >
+        <action
+            android:id="@+id/action_notificationListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="pure_blue">#FF0000FF</color>
-    <color name="custom_app_theme">#ff98a7c2</color>
+    <color name="custom_corner_radius_app_theme_50dp">#ff98a7c2</color>
     <color name="textColor">#FFECE5EC</color>
     <color name="blue">#2196F3</color>
     <color name="black">#000000</color>

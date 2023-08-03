@@ -7,7 +7,7 @@
         android:radius="40dp" />
     <stroke
         android:width="3dp"
-        android:color="@color/custom_app_theme" />
+        android:color="@color/custom_corner_radius_app_theme_50dp" />
     <padding
         android:bottom="12dp"
         android:left="12dp"

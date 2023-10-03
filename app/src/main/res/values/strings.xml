@@ -11,12 +11,12 @@
     <string name="app_confirm_password_error">Please re-enter a valid password to confirm!</string>
     <string name="app_password_match_error">Passwords don\'t match!</string>
     <string name="app_forgot_password_title">Forgot Password</string>
-    <string name="app_reset_password">Reset Password</string>
+    <string name="app_reset_password_title">Reset Password</string>
     <string name="app_reset_email_hint">Enter email to reset password</string>
     <string name="app_reset_email_title">Please enter email to reset password</string>
     <string name="app_back_to_login"><u><![CDATA[<< Back to Login]]></u></string>
     <string name="app_open">Open</string>
     <string name="app_close">Close</string>
     <string name="app_no_internet">No Internet Connection!</string>
-    <string name="app_empty_string" />
+    <string name="app_empty_string" > </string>
 </resources>

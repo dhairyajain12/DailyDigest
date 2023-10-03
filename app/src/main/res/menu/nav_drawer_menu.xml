@@ -3,39 +3,45 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/img_ic_profile"
+            android:title="Profile"/>
+    
+    
+        <item
+            android:id="@+id/nav_theme"
+            android:icon="@drawable/img_ic_theme"
+            android:title="Theme"/>
+    
+        <item
+            android:id="@+id/nav_calender"
+            android:icon="@drawable/img_ic_calendar"
+            android:title="Calender" />
+    
+        <item
+            android:id="@+id/nav_follow_us"
+            android:icon="@drawable/img_ic_follow_us"
+            android:title="Follow Us" />
+    
+        <item
+            android:id="@+id/nav_backup_restore"
+            android:icon="@drawable/img_ic_backup"
+            android:title="Backup &amp; Restore" />
+    
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/img_ic_faq"
+            android:title="FAQ" />
+    
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/img_ic_settings"
+            android:title="Settings" />
+    </group>
     <item
-        android:id="@+id/nav_profile"
-        android:icon="@drawable/img_ic_profile"
-        android:title="Profile"/>
-
-
-    <item
-        android:id="@+id/nav_theme"
-        android:icon="@drawable/img_ic_theme"
-        android:title="Theme"/>
-
-    <item
-        android:id="@+id/nav_calender"
-        android:icon="@drawable/img_ic_calendar"
-        android:title="Calender" />
-
-    <item
-        android:id="@+id/nav_follow_us"
-        android:icon="@drawable/img_ic_follow_us"
-        android:title="Follow Us" />
-
-    <item
-        android:id="@+id/nav_backup_restore"
-        android:icon="@drawable/img_ic_backup"
-        android:title="Backup &amp; Restore" />
-
-    <item
-        android:id="@+id/nav_faq"
-        android:icon="@drawable/img_ic_faq"
-        android:title="FAQ" />
-
-    <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/img_ic_settings"
-        android:title="Settings" />
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout" />
 </menu>

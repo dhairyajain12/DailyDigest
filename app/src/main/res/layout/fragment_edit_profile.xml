@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.EditProfileFragment">
+    tools:context=".EditProfileFragment" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#98a7c2">
+        android:background="@color/color_app_theme" >
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,13 +21,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Edit Profile"
-            android:textSize="20sp"
+            android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/ic_back"
@@ -37,12 +38,13 @@
         <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
-            android:layout_height="480dp"
+            android:layout_height="540dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/corner_radius_white_30dp"
             app:cardCornerRadius="20dp"
+            app:cardElevation="-10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +54,8 @@
             android:id="@+id/img_edtprofile"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:background="@drawable/round_corner_radius_e1e1e1_300dp"
-            android:src="@drawable/ic_launcher_background"
+            android:background="@drawable/corner_radius_e1e1e1_300dp"
+            android:src="@drawable/ic_default_img_profile"
             app:layout_constraintBottom_toTopOf="@id/card_view"
             app:layout_constraintEnd_toEndOf="@id/card_view"
             app:layout_constraintStart_toStartOf="@id/card_view"
@@ -65,8 +67,9 @@
             android:id="@+id/background_camera"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/corner_radius_app_theme_30"
+            android:background="@drawable/corner_radius_app_theme_30dp"
             android:backgroundTint="#BDCCD1"
+            app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="@id/img_edtprofile"
             app:layout_constraintEnd_toEndOf="@id/img_edtprofile"
             app:layout_constraintTop_toTopOf="@id/card_view"
@@ -84,108 +87,131 @@
             app:layout_constraintStart_toStartOf="@id/background_camera"
             app:layout_constraintTop_toTopOf="@id/background_camera" />
 
-        <!--        <androidx.appcompat.widget.AppCompatEditText-->
-        <!--            android:id="@+id/edt_name"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:hint="Enter Your Name"-->
-        <!--            android:background="@drawable/dr_textfield"-->
-        <!--            android:layout_marginStart="16dp"-->
-        <!--            android:minHeight="48dp"-->
-        <!--            app:layout_constraintEnd_toStartOf="@+id/edt_age"-->
-        <!--            app:layout_constraintStart_toStartOf="@+id/card_view"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/img_edtprofile" />-->
-
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edt_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toStartOf="@+id/edt_age"
+            app:layout_constraintEnd_toEndOf="@id/card_view"
             app:layout_constraintStart_toStartOf="@+id/card_view"
             app:layout_constraintTop_toBottomOf="@id/img_edtprofile"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="32dp"
-            android:hint="Enter Your Name"
-            >
+            android:hint="Enter your name" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPersonName"
                 android:singleLine="true"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
+        </com.google.android.material.textfield.TextInputLayout >
+<!--
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edt_age"
-            android:layout_width="160dp"
+            android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
-            android:hint="Enter Your Age"
+            android:hint="Enter your age"
             app:layout_constraintBottom_toBottomOf="@id/edt_name"
             app:layout_constraintEnd_toEndOf="@+id/card_view"
             app:layout_constraintStart_toEndOf="@+id/edt_name"
-            app:layout_constraintTop_toTopOf="@id/edt_name">
+            app:layout_constraintTop_toTopOf="@id/edt_name" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/edt_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Email Id"
+            android:hint="Enter your username"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="@id/edt_name"
             app:layout_constraintTop_toBottomOf="@id/edt_name"
-            app:layout_constraintEnd_toEndOf="@id/edt_age">
+            app:layout_constraintEnd_toEndOf="@id/edt_name" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"/>
+                android:inputType="text|number"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout >
+        
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/edt_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email Id"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/edt_username"
+            app:layout_constraintTop_toBottomOf="@id/edt_username"
+            app:layout_constraintEnd_toEndOf="@id/edt_username" >
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout >
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edt_mno"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Mobile"
+            android:hint="Enter your mobile number"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="@id/edt_email"
             app:layout_constraintTop_toBottomOf="@id/edt_email"
-            app:layout_constraintEnd_toEndOf="@id/edt_email">
+            app:layout_constraintEnd_toEndOf="@id/edt_email" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"/>
-
+                android:inputType="phone"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/edt_dob"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Date of Birth"
+            android:hint="Enter your date of birth"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="@id/edt_mno"
             app:layout_constraintTop_toBottomOf="@id/edt_mno"
-            app:layout_constraintEnd_toEndOf="@id/edt_mno">
+            app:layout_constraintEnd_toEndOf="@id/edt_mno" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:singleLine="true"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
+                android:inputType="date"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout >
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_radius_app_theme_30dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Save"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/color_app_theme"
+            app:layout_constraintBottom_toBottomOf="@id/card_view"
+            app:layout_constraintEnd_toEndOf="@id/card_view"
+            app:layout_constraintStart_toStartOf="@id/card_view"
+            app:layout_constraintTop_toBottomOf="@id/edt_dob" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </FrameLayout>

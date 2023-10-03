@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.CalendarFragment">
+    tools:context=".CalendarFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#66D2DDE1">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#98a7c2"
+            android:background="@color/color_app_theme"
             app:title="Calendar"
             app:navigationIcon="@drawable/ic_back"
             app:titleTextColor="@color/black"/>
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,7 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_date_entry_journal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -74,12 +75,11 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
+            android:padding="8dp"
             app:layout_constraintStart_toStartOf="@id/txt_date_entry_journal"
             app:layout_constraintEnd_toEndOf="@id/txt_date_entry_journal"
             app:layout_constraintTop_toBottomOf="@id/txt_date_entry_journal"
             app:layout_constraintBottom_toBottomOf="parent"/>
-
-
+        
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </FrameLayout>

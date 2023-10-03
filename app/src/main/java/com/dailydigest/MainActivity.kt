@@ -1,36 +1,25 @@
 package com.dailydigest
 
-import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.appcompat.app.AppCompatActivity
 import com.dailydigest.databinding.ActivityMainBinding
-import com.google.firebase.auth.EmailAuthProvider
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.auth.ktx.userProfileChangeRequest
-import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
-    private val TAG = "MainActivity"
+    //private val tag = "MainActivity"
 
     // var declaration
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Thread.sleep(1500)
-        installSplashScreen()
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
     }
-
+    
 /*    private fun checkCurrentUser() {
         val user = Firebase.auth.currentUser
         if (user != null) {
-            // User is signed in
+            // UserData is signed in
             startActivity(Intent(this, MainActivity::class.java))
         } else {
             // No user is signed in
@@ -72,17 +61,17 @@ class MainActivity : AppCompatActivity() {
     private fun updateProfile() {
         val user = Firebase.auth.currentUser
         val profileUpdates = userProfileChangeRequest {
-            displayName = "Jane Q. User"
+            displayName = "Jane Q. UserData"
             photoUri = Uri.parse("https://example.com/jane-q-user/profile.jpg")
         }
 
         user?.updateProfile(profileUpdates)
             ?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Log.d(TAG, "User profile updated.")
-                    Toast.makeText(this, "User profile updated successfully.", Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "UserData profile updated.")
+                    Toast.makeText(this, "UserData profile updated successfully.", Toast.LENGTH_SHORT).show()
                 } else {
-                    Log.w(TAG, "User profile update failed.", task.exception)
+                    Log.w(TAG, "UserData profile update failed.", task.exception)
                     Toast.makeText(this, "Something went wrong, please try again later.", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -94,10 +83,10 @@ class MainActivity : AppCompatActivity() {
             user.updateEmail("user@example.com")
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Log.d(TAG, "User email address updated.")
-                        Toast.makeText(this, "User email address updated successfully.", Toast.LENGTH_SHORT).show()
+                        Log.d(TAG, "UserData email address updated.")
+                        Toast.makeText(this, "UserData email address updated successfully.", Toast.LENGTH_SHORT).show()
                     } else {
-                        Log.w(TAG, "User email address update failed.", task.exception)
+                        Log.w(TAG, "UserData email address update failed.", task.exception)
                         Toast.makeText(this, "Something went wrong, please try again later.", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -111,10 +100,10 @@ class MainActivity : AppCompatActivity() {
             user.updatePassword(newPassword)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Log.d(TAG, "User password updated.")
-                        Toast.makeText(this, "User password updated successfully.", Toast.LENGTH_SHORT).show()
+                        Log.d(TAG, "UserData password updated.")
+                        Toast.makeText(this, "UserData password updated successfully.", Toast.LENGTH_SHORT).show()
                     } else {
-                        Log.w(TAG, "User password update failed.", task.exception)
+                        Log.w(TAG, "UserData password update failed.", task.exception)
                         Toast.makeText(this, "Something went wrong, please try again later.", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -155,7 +144,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun signOutUser() {
         Firebase.auth.signOut()
-        Toast.makeText(this, "User signed out successfully.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "UserData signed out successfully.", Toast.LENGTH_SHORT).show()
         installSplashScreen()
         startActivity(Intent(this, LoginSignUpActivity::class.java))
     }
@@ -165,10 +154,10 @@ class MainActivity : AppCompatActivity() {
         user!!.delete()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Log.d(TAG, "User account deleted.")
-                    Toast.makeText(this, "User account deleted successfully.", Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "UserData account deleted.")
+                    Toast.makeText(this, "UserData account deleted successfully.", Toast.LENGTH_SHORT).show()
                 } else {
-                    Log.w(TAG, "User account not deleted.", task.exception)
+                    Log.w(TAG, "UserData account not deleted.", task.exception)
                     Toast.makeText(this, "Something went wrong, please try again later.", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -182,10 +171,10 @@ class MainActivity : AppCompatActivity() {
         user!!.reauthenticate(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Log.d(TAG, "User re-authenticated.")
-                    Toast.makeText(this, "User re-authenticated successfully.", Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "UserData re-authenticated.")
+                    Toast.makeText(this, "UserData re-authenticated successfully.", Toast.LENGTH_SHORT).show()
                 } else {
-                    Log.w(TAG, "User re-authentication failed.", task.exception)
+                    Log.w(TAG, "UserData re-authentication failed.", task.exception)
                     Toast.makeText(this,"Something went wrong, please try again later.", Toast.LENGTH_SHORT).show()
                 }
             }

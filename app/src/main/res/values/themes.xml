@@ -1,33 +1,37 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.DailyDigest" parent="Theme.Material3.DayNight.NoActionBar">
+<resources>
+    <!-- Base Application Material Theme. -->
+    <style name="Base.ThemeComponent.App.DailyDigest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="android:statusBarColor">#98a7c2</item>
+        <item name="android:statusBarColor">@color/color_app_theme</item>
+    </style>
+    
+    <!-- Base Application AppCompat Theme -->
+    <style name="Base.ThemeCompat.App.DailyDigest" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/color_app_theme</item>
+    </style>
+    
+
+    <!-- Splash Screen theme -->
+    <style name="Base.ThemeSplash.App.SplashScreen" parent="Theme.SplashScreen">
+        <!-- Customize your splash screen theme here -->
+        <item name="windowSplashScreenBackground">@color/color_app_theme</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Base.ThemeComponent.App.DailyDigest</item>
     </style>
     
     <style name="Base.Theme.DailyDigest.BackgroundImage">
 <!--        <item name="android:windowBackground">@drawable/bg_journal_1</item>-->
-
     </style>
-
-    <!-- Splash Screen theme.  -->
-    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
-        <!-- Customize your splash screen theme here -->
-        <item name="windowSplashScreenBackground">@color/custom_corner_radius_app_theme_50dp</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
-        <item name="postSplashScreenTheme">@style/Theme.App.DailyDigest</item>
-    </style>
-
-    <style name="Theme.App.DailyDigest" parent="Base.Theme.DailyDigest" />
+    
     <style name="Theme.DailyDigest" parent="Base.Theme.DailyDigest.BackgroundImage" />
     
-<!--    Rating bar star theme-->
+    <!-- Rating bar star theme -->
     <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
-
-        <!-- normal color of star-->
+        <!-- normal color of star -->
         <item name="colorControlNormal">#66D2DDE1</item>
-
-        <!-- activated color of star-->
-        <item name="colorControlActivated">#98a7c2</item>
+        <!-- activated color of star -->
+        <item name="colorControlActivated">@color/color_app_theme</item>
     </style>
 </resources>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="pure_blue">#FF0000FF</color>
-    <color name="custom_corner_radius_app_theme_50dp">#ff98a7c2</color>
-    <color name="textColor">#FFECE5EC</color>
-    <color name="blue">#2196F3</color>
-    <color name="black">#000000</color>
+    <color name="color_app_theme">#FF98A7C2</color>
+    <color name="blue">#FF2196F3</color>
+    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="transperent">#00FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

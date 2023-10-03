@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.SearchFragment">
+    tools:context=".SearchFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#98a7c2">
-
-        <androidx.appcompat.widget.AppCompatImageView
+        android:layout_height="match_parent">
+        
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back"
             android:padding="16dp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
+        
+        <com.google.android.material.search.SearchView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:endIconMode="clear_text"
-            android:layout_marginEnd="32dp"
-            android:minHeight="30dp"
-            android:layout_marginTop="-4dp">
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edt_search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/dr_remove_border"
-                android:hint="@string/app_empty_string"
-                android:minHeight="40dp"
-                android:singleLine="true" />
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:queryHint="Search"
+            android:iconifiedByDefault="false"
+            android:id="@+id/search_view"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="-8dp"
                 android:background="#80000000"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>

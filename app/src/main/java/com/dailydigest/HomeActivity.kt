@@ -1,7 +1,7 @@
 package com.dailydigest
 
 import android.os.Bundle
-import androidx.appcompat.app.*
+import androidx.appcompat.app.AppCompatActivity
 import com.dailydigest.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout 
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
+        android:layout_height="match_parent"
+        android:background="#66D2DDE1">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_app_theme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Search Note" />
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ic_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="-0.7dp"
             android:src="@drawable/ic_back"
-            android:padding="16dp"/>
-        
-        <com.google.android.material.search.SearchView
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:padding="8dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:queryHint="Search"
-            android:iconifiedByDefault="false"
-            android:id="@+id/search_view"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="-8dp"
-                android:background="#80000000"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

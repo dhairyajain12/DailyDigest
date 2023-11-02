@@ -20,24 +20,28 @@
         android:theme="@style/Base.ThemeSplash.App.SplashScreen"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateNoteActivity"
+            android:theme="@style/Base.ThemeAppCompat.App.DailyDigest"
+            android:exported="false" />
+        <activity
             android:name=".CreateJournalActivity"
             android:exported="false"
-            android:theme="@style/Base.ThemeCompat.App.DailyDigest" />
+            android:theme="@style/Base.ThemeAppCompat.App.DailyDigest" />
         <activity
             android:name=".HomeActivity"
-            android:theme="@style/Base.ThemeComponent.App.DailyDigest"
+            android:theme="@style/Base.ThemeMatComponent.App.DailyDigest"
             android:exported="false" />
         <activity
             android:name=".ForgetPasswordActivity"
             android:exported="false"
-            android:theme="@style/Base.ThemeComponent.App.DailyDigest" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:theme="@style/Base.ThemeMatComponent.App.DailyDigest" />
         <activity
             android:name=".LoginSignUpActivity"
             android:exported="true"
-            android:theme="@style/Base.ThemeComponent.App.DailyDigest">
+            android:theme="@style/Base.ThemeMatComponent.App.DailyDigest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

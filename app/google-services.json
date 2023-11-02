@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "975213990758-au85346j7qf3jb6hu2nuo10mm59hkrjc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dailydigest",
+            "certificate_hash": "657d731b5c14b9f68060af4cdd32fc38f7174fa4"
+          }
+        },
+        {
           "client_id": "975213990758-ov3bkd093s18aismcs9214r94qnmee54.apps.googleusercontent.com",
           "client_type": 3
         }

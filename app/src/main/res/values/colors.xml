@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pure_blue">#FF0000FF</color>
     <color name="color_app_theme">#FF98A7C2</color>
-    <color name="blue">#FF2196F3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="transparent">#00FFFFFF</color>
+    <color name="mat_edit_box_stroke_color">#99000000</color>
+    <color name="drawer_background">#F2F3F2</color>
 </resources>

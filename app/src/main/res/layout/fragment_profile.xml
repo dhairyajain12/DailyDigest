@@ -65,6 +65,33 @@
             app:layout_constraintTop_toBottomOf="@id/txt_header_profile"
             app:shapeAppearanceOverlay="@style/Circular" />
 
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/background_camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/corner_radius_app_theme_30dp"
+            android:backgroundTint="#BDCCD1"
+            android:visibility="gone"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/img_userprofile"
+            app:layout_constraintEnd_toEndOf="@id/img_userprofile"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ic_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_camera"
+            android:background="@drawable/corner_radius_app_theme_30dp"
+            android:backgroundTint="#BDCCD1"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/background_camera"
+            app:layout_constraintEnd_toEndOf="@id/background_camera"
+            app:layout_constraintStart_toStartOf="@id/background_camera"
+            app:layout_constraintTop_toTopOf="@id/background_camera" />
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_display_name"
             android:layout_width="match_parent"

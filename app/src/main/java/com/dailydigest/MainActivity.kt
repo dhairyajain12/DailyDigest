@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.dailydigest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    //private val tag = "MainActivity"
-
     // var declaration
     private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -124,29 +121,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
         }
-    }
-
-    private fun sendPasswordReset() {
-        val auth = Firebase.auth
-        val emailAddress = "user@example.com"
-
-        Firebase.auth.sendPasswordResetEmail(emailAddress)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Log.d(TAG, "Email sent.")
-                    Toast.makeText(this, "Email sent successfully.", Toast.LENGTH_SHORT).show()
-                } else {
-                    Log.w(TAG, "Email not sent.", task.exception)
-                    Toast.makeText(this, "Something went wrong, please try again later.", Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
-
-    private fun signOutUser() {
-        Firebase.auth.signOut()
-        Toast.makeText(this, "UserData signed out successfully.", Toast.LENGTH_SHORT).show()
-        installSplashScreen()
-        startActivity(Intent(this, LoginSignUpActivity::class.java))
     }
 
     private fun deleteUser() {

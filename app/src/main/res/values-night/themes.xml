@@ -1,7 +1,23 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.DailyDigest" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<resources>
+    <!-- Base Application Material Theme. -->
+    <style name="Base.ThemeMatComponent.App.DailyDigest" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/color_app_theme</item>
     </style>
+
+    <!-- Base Application AppCompat Theme -->
+    <style name="Base.ThemeAppCompat.App.DailyDigest" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/color_app_theme</item>
+    </style>
+
+    <!-- Splash Screen theme -->
+    <style name="Base.ThemeSplash.App.SplashScreen" parent="Theme.SplashScreen">
+        <!-- Customize your splash screen theme here -->
+        <item name="windowSplashScreenBackground">@color/color_app_theme</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Base.ThemeMatComponent.App.DailyDigest</item>
+    </style>
+
 </resources>

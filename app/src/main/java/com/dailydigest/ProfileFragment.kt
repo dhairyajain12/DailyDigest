@@ -8,15 +8,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.dailydigest.databinding.FragmentProfileBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
     
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        auth = FirebaseAuth.getInstance()
         // Inflate the layout for this fragment
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         binding.txtUserAge.text = getAge().toString()
@@ -25,6 +28,8 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.txtUserEmail.text = auth.currentUser!!.email
+        binding.txtUserName.text = auth.currentUser!!.displayName
 
         binding.icBack.setOnClickListener{
             val action = ProfileFragmentDirections.actionProfileFragmentToHomeFragment()

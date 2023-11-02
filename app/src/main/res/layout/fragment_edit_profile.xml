@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="540dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/corner_radius_white_30dp"
             app:cardCornerRadius="20dp"
@@ -88,7 +88,7 @@
             app:layout_constraintTop_toTopOf="@id/background_camera" />
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/CustomMaterialTextInputLayout"
             android:id="@+id/edt_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -106,28 +106,9 @@
                 android:inputType="textPersonName"
                 android:singleLine="true"/>
         </com.google.android.material.textfield.TextInputLayout >
-<!--
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/edt_age"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:hint="Enter your age"
-            app:layout_constraintBottom_toBottomOf="@id/edt_name"
-            app:layout_constraintEnd_toEndOf="@+id/card_view"
-            app:layout_constraintStart_toEndOf="@+id/edt_name"
-            app:layout_constraintTop_toTopOf="@id/edt_name" >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true" />
-        </com.google.android.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/CustomMaterialTextInputLayout"
             android:id="@+id/edt_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -140,12 +121,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text|number"
+                android:inputType="text"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout >
         
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/CustomMaterialTextInputLayout"
             android:id="@+id/edt_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -163,7 +144,7 @@
         </com.google.android.material.textfield.TextInputLayout >
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/CustomMaterialTextInputLayout"
             android:id="@+id/edt_mno"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -181,12 +162,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/CustomMaterialTextInputLayout"
             android:id="@+id/edt_dob"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Enter your date of birth"
+            android:hint="Date of birth (dd/MM/YYYY)"
             android:layout_marginTop="12dp"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_calendar"
+            app:endIconMinSize="50dp"
             app:layout_constraintStart_toStartOf="@id/edt_mno"
             app:layout_constraintTop_toBottomOf="@id/edt_mno"
             app:layout_constraintEnd_toEndOf="@id/edt_mno" >
@@ -200,12 +184,12 @@
         
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_save"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/corner_radius_app_theme_30dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:text="Save"
+            android:text="@string/app_save"
             android:textSize="18sp"
             android:textColor="@color/white"
             app:backgroundTint="@color/color_app_theme"

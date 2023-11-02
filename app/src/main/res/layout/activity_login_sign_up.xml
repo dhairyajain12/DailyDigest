@@ -171,6 +171,30 @@
                         android:textStyle="normal"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/edt_password_login_layout" />
+
+                    <!-- Login Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/corner_radius_btn_50dp"
+                        android:elevation="15dp"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="@string/app_login"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:layout_constraintTop_toBottomOf="@id/tv_forget_password"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:backgroundTint="@color/color_app_theme" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!-- SignUp Form -->
@@ -269,27 +293,31 @@
                             android:textSize="16sp"
                             android:textStyle="normal" />
                     </com.google.android.material.textfield.TextInputLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <!-- Login or SignUp Button -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_login"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="24dp"
-                    android:background="@drawable/corner_radius_btn_50dp"
-                    android:elevation="15dp"
-                    android:gravity="center"
-                    android:minHeight="48dp"
-                    android:text="@string/app_login"
-                    android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
-                    app:backgroundTint="@color/color_app_theme" />
+                    <!-- SignUp Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_signUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/corner_radius_btn_50dp"
+                        android:elevation="15dp"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="@string/app_sign_up"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:layout_constraintTop_toBottomOf="@id/edt_confirm_password_signup_layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:backgroundTint="@color/color_app_theme" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

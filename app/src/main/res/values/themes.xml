@@ -1,37 +1,23 @@
 <resources>
     <!-- Base Application Material Theme. -->
-    <style name="Base.ThemeComponent.App.DailyDigest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.ThemeMatComponent.App.DailyDigest" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/color_app_theme</item>
     </style>
     
     <!-- Base Application AppCompat Theme -->
-    <style name="Base.ThemeCompat.App.DailyDigest" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Base.ThemeAppCompat.App.DailyDigest" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/color_app_theme</item>
     </style>
     
-
     <!-- Splash Screen theme -->
     <style name="Base.ThemeSplash.App.SplashScreen" parent="Theme.SplashScreen">
         <!-- Customize your splash screen theme here -->
         <item name="windowSplashScreenBackground">@color/color_app_theme</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="windowSplashScreenAnimationDuration">1000</item>
-        <item name="postSplashScreenTheme">@style/Base.ThemeComponent.App.DailyDigest</item>
+        <item name="postSplashScreenTheme">@style/Base.ThemeMatComponent.App.DailyDigest</item>
     </style>
-    
-    <style name="Base.Theme.DailyDigest.BackgroundImage">
-<!--        <item name="android:windowBackground">@drawable/bg_journal_1</item>-->
-    </style>
-    
-    <style name="Theme.DailyDigest" parent="Base.Theme.DailyDigest.BackgroundImage" />
-    
-    <!-- Rating bar star theme -->
-    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
-        <!-- normal color of star -->
-        <item name="colorControlNormal">#66D2DDE1</item>
-        <!-- activated color of star -->
-        <item name="colorControlActivated">@color/color_app_theme</item>
-    </style>
+
 </resources>

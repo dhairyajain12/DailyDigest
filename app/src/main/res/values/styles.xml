@@ -3,7 +3,15 @@
     <style name="Circular">
         <item name="cornerSize">50%</item>
     </style>
-    <style name="RoundedSquare">
-        <item name="cornerSize">10%</item>
+
+    <!-- Custom Material Text Input Layout Style -->
+    <style name="CustomMaterialTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/mat_edit_box_stroke_color</item>
+        <item name="hintTextColor">@color/mat_edit_box_stroke_color</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
     </style>
 </resources>

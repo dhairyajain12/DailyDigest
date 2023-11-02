@@ -1,11 +1,11 @@
 package com.dailydigest
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dailydigest.databinding.ActivityForgetPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -53,6 +53,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
             .addOnSuccessListener { _ ->
                 Toast.makeText(this, "Email Sent Successfully", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, LoginSignUpActivity::class.java))
+                finish()
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this, exception.localizedMessage, Toast.LENGTH_SHORT).show()

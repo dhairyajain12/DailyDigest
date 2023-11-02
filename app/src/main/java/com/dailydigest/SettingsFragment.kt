@@ -5,7 +5,9 @@ import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.dailydigest.databinding.FragmentSettingsBinding
@@ -45,7 +47,7 @@ class SettingsFragment : Fragment() {
         binding.constraintLytDateFormat.setOnClickListener {
             val listDate =
                 arrayOf("20 July 2023", "20 July 2023 9:28 am", "20 July 2023 9:28 am Sun")
-            showFormat(R.drawable.img_ic_calendar, "Select Date Format", listDate)
+            showFormat(R.drawable.ic_calendar, "Select Date Format", listDate)
         }
 
         binding.constraintLytTimeFormat.setOnClickListener {
@@ -61,7 +63,7 @@ class SettingsFragment : Fragment() {
 
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "message/rfc822"
-            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("pateltushar9601780945@gmail.com"))
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("dhairyajainrocks@gmail.com"))
             intent.putExtra(
                 Intent.EXTRA_SUBJECT,
                 "Feedback : Daily Digest application [$currentDate]"
